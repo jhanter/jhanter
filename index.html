@@ -1,16 +1,515 @@
 <!doctype html>
 <html lang="id">
-
 <head>
     <meta charset="utf-8">
-    <title>Helo</title>
+    <title>JH Online | Undangan Online Website</title>
     <link rel="icon" href="img/icons/favicon.png">
     <meta name="description" content="HTML Template">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- All CSS files included -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+<style>
+html,body{margin:0;padding:0;font-family: 'Montserrat';line-height:1.7em;background-color:#ddd;font-size:0.9375rem;color:#757475;}
+a.button{background-color:#4CAF50;display:inline-block;text-decoration:none;padding:10px 20px;color:#fff;}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.clearfix::after {content: "";clear: both;display: table;}
+/* start */
+.boxed{width:1000px;background-color:#fff;margin:3rem auto;z-index:1;position:relative;}
+.jscon{
+margin:0 auto;
+background-color:transparent;
+position:relative;
+max-width:768px;
+box-sizing:border-box;
+}
+.jsrow{
+background-color:transparent;
+width:100%;
+height:100%;
+position:relative;
+box-sizing:border-box;
+}
+.jscolum{
+width:100%;
+height:100%;
+position:relative;
+box-sizing:border-box;
+overflow-y: scroll;
+}
+
+/*wraper*/
+.js-wrapper{
+background-color:transparent;
+background-image:url("");
+background-repeat:repeat;
+width:100%;
+position:relative;
+z-index:2
+}
+.js-wrapper:before{
+top:0;
+left:0;
+content: "";
+position:absolute;
+background-color:#fff;
+width:50%;
+height:100%;
+z-index:0;
+}
+.js-wrapper:after{
+top:0;
+right:0;
+content: "";
+position:absolute;
+background-color:#D7572A;
+width:50%;
+height:100%;
+z-index:-1;
+}
+
+
+
+/*jskolom*/
+.jskolom{position:relative;float:left}
+.jhwidth-1{width:40%;height:340px;box-sizing:border-box;}
+.jhwidth-2{width:60%;height:340px;box-sizing:border-box;}
+
+.jhwidth-3{width:100%;box-sizing:border-box;}
+.bgpinggir{position:relative;background-color:#fff;}
+.bgpinggir:before{
+top:0;
+right:0;
+content: "";
+position:absolute;
+background-color:#DCB99B;;
+width: calc(73%);
+height:100%;
+}
+
+
+@media all and (orientation:landscape) and (orientation:portrait) {}
+@media and (orientation:landscape){}
+@media (max-width: 896px) and (min-width: 375px) and (orientation:landscape){}
+
+/*logo*/
+img.logo-produk{width:60px;height:60px;}
+
+/*button*/
+button.jfbutton{width:110px;cursor:pointer;text-transform: uppercase;position:relative;background-color:#4CAF50;display:inline-block;text-decoration:none;padding:10px 20px;color:#fff;}
+
+/*herotext*/
+.hero-text{position:relative;left:50%;top:50%;transform: translate(-50%,-50%);max-width:240px;text-align:center}
+.hero-text h3{text-align:center;0;margin-bottom:3rem;;font-family:"Great Vibes";font-size:3rem;color:#757475}
+
+/*img header*/
+img.bg-header{width:100%;height:100%;object-fit:cover}
+
+.smarphone-mocup{width:160px;position:relative;top:50%;transform: translateY(-50%);left:6%}
+.smarphone-mocup img{width:100%;vertical-align:middle}
+
+/*-- text pemicu --*/
+.text-pemicu{text-align:center;padding:3rem 1.5rem;max-width:600px;margin:0 auto;}
+
+/*-- bagian-demo --*/
+.text-demo{width:100%;float:left;padding:3rem 0;padding-bottom:1.5rem}
+.text-demo h4{text-align:center;font-family: 'Montserrat';font-size:1em;margin:8px 0;text-transform:uppercase;color:#757475}
+.bagian-demo{width:100%;margin:0 auto;margin-bottom: 1.5rem;padding:0 1.5rem;box-sizing:border-box}
+.untuk-thumb{float:left;width:50%;}
+.untuk-thumb .thumb-img{padding:20px;}
+.untuk-thumb a{display:block}
+.untuk-thumb img{vertical-align:middle;width:100%;}
+.tempat-button{float:left;width:100%;padding:30px 0;text-align:center}
+
+
+
+/*js footer */
+.js-footer{width:100%;position:relative}
+.js-footer:before{
+top:0;
+left:0;
+content: "";
+position:absolute;
+background-color:#fff;
+width:50%;
+height:100%;
+z-index:0;
+}
+.js-footer:after{
+top:0;
+right:0;
+content: "";
+position:absolute;
+background-color:#DCB99B;
+width:50%;
+height:100%;
+z-index:-1;
+}
+.con-footer{width:100%;box-sizing:border-box;}
+.con-footer .in-footer{float:left;width:50%;}
+.con-footer .in-footer.bilah-1{height:300px;}
+.con-footer .in-footer.bilah-2{height:300px;}
+.kolom-sosial{position:relative;left:50%;top:50%;transform:translate(-50%,-50%);max-width:200px;color:#fff}
+.kolom-sosial h3{margin:0;margin-bottom:1rem;text-transform:uppercase}
+.kolom-marketing{position:relative;left:50%;top:50%;transform:translate(-50%,-50%);max-width:200px;}
+
+.kolom-marketing h3{transform: rotate(-90deg);position:absolute;text-align:center;left:-60%;color:#fff;text-transform:uppercase}
+.logo-marketing p{color:#757475}
+.logo-marketing a{background-color:#4CAF50;text-align:center;display:inline-block;text-decoration:none;padding:10px 20px;color:#fff;;}
+.thumbnail-marketing{width:36px;height:36px;background-color:orange;display:inline-block;border-radius: 50%;margin-right:10px}
+
+.link-mendia-online a{display:block;color:#fff;text-decoration:none;margin-bottom:0.5rem}
+
+
+/* acordoin */
+.con-faq{padding:3rem;padding-top:0}
+.con-faq button.accordion{font-weight:600}
+.con-faq h4{font-size:1rem;font-family: 'Montserrat';}
+.accordion {
+  background-color: #F5F6F6;
+  color: #757475;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #DCB99B;
+  color:#fff
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+@media (max-width:1024px){
+.boxed{width:100%;background-color:#fff;margin:0 auto;z-index:1;position:relative;}
+}
+
+@media (max-width:767px){
+	.js-wrapper:before{width:50%;}
+	.js-wrapper:after{width:50%;background-color:transparent}
+	.jhwidth-1{width:100%;height:300px;}
+	.jhwidth-2{width:100%;height:250px;background-color:#D7572A;}
+	.bgpinggir:before{
+		top:0;
+		right:0%;
+		content: "";
+		position:absolute;
+		background-color:#DCB99B;
+		width: calc(50%);
+		height:100%;
+	}
+	.con-faq{padding:2rem;padding-top:0}
+	.smarphone-mocup{width:160px;position:relative;left:50%;top:50%;transform: translate(-50%,-50%)}
+	.bagian-demo{padding:0 0.5rem}
+	.untuk-thumb{float:left;width:100%;}
+	
+	.js-footer:before{background-color:#fff;}
+    .js-footer:after{background-color:transparent;}
+	.in-footer.bilah-2{background-color:#DCB99B;}
+	.con-footer .in-footer{float:left;width:100%;}
+	
+}
+</style>
+
 </head>
 <body>
-<h1> welcome coming soon </h1>
+<div class="boxed">
+<div class="js-wrapper">
+	<div class="jscon">
+		<div class="jsrow clearfix">
+			
+
+			
+			 
+			 <div class="jskolom jhwidth-1">
+			   <div class="hero-text">
+					<img class="logo-produk" src="img/logo-marketing.png" />
+					<h3>Jh Online</h3>
+					<a class="button" href="https://api.whatsapp.com/send?phone=6281285869732"><i class="fa fa-whatsapp" aria-hidden="true"></i> Hubungi</a>
+			   </div><!-- hero text-->
+			 </div>
+			 
+			  <div class="jskolom jhwidth-2">
+			   <img class="bg-header" src="img/bg-header.png" />
+			  
+			 </div>
+			 
+			
+			
+		</div><!-- -->
+		
+	</div>
+</div>
+
+
+<div class="">
+	<div class="jscon">
+		<div class="jsrow">
+				<div class="bagian-demo clearfix">
+					<div class="text-demo"><h4>Demo Undangan</h4></div>
+					
+					<div class="untuk-thumb">
+						<div class="thumb-img">
+							<a href="#">
+								<img src="img/tipejf001.jpg" />
+							</a>
+						</div><!-- thumb-img -->
+					</div><!-- untuk-thumb -->
+					
+					<div class="untuk-thumb">
+						<div class="thumb-img">
+							<a href="#">
+								<img src="img/tipejf002.jpg" />
+							</a>
+						</div><!-- thumb-img -->
+					</div><!-- untuk-thumb -->
+					
+					<div class="untuk-thumb">
+						<div class="thumb-img">
+							<a href="#">
+								<img src="img/tipejf003.jpg" />
+							</a>
+						</div><!-- thumb-img -->
+					</div><!-- untuk-thumb -->
+					
+					<div class="untuk-thumb">
+						<div class="thumb-img">
+							<a href="#">
+								<img src="img/tipejf004.jpg" />
+							</a>
+						</div><!-- thumb-img -->
+					</div><!-- untuk-thumb -->
+					<div class="untuk-thumb">
+						<div class="thumb-img">
+							<a href="#">
+								<img src="img/tipejf006.jpg" />
+							</a>
+						</div><!-- thumb-img -->
+					</div><!-- untuk-thumb -->
+					
+					<div class="untuk-thumb">
+						<div class="thumb-img">
+							<a href="#">
+								<img src="img/tipejf007.jpg" />
+							</a>
+						</div><!-- thumb-img -->
+					</div><!-- untuk-thumb -->
+					<div class="tempat-button" style="display:none">
+							<a class="button" href="#"></i>Lihat Demo Lainya</a>
+					</div>
+				</div><!-- bagian-demo -->
+		</div><!-- -->
+	</div>
+</div>
+
+
+<div class="faq-jf">
+	<div class="jscon">
+		<div class="jsrow">
+		<!-- end faq content -->
+		<div class="con-faq">
+		<h4>FAQ</h4>
+<p>Kamu Bisa baca dulu Faq ini semoga pertanyaan yang mau kamu tanyakan sudah ada di sini<br>
+caranya lihat pertanyaan lalu klik pertanyaan maka jawaban akan terbuka
+</p>
+
+<button class="accordion">1. Apa itu undangan Website?</button>
+<div class="panel">
+  <p>Undanga website adalah undangan digital yang di desain sedemikian rupa layaknya undangan kertas yang siap dibagikan, bedanya kalau undangan website berbentuk link URL dan kamu cukup membagikan/share link URL nya agar di klik dan di buka di browser smartphone atau PC</p>
+</div>
+
+<button class="accordion">2. Seperti Apa sih undangan Website ?</button>
+<div class="panel">
+  <p>Bisa di lihat demo undangan website di <a href="#"> sini </a></p>
+</div>
+
+<button class="accordion">3. Seperti Apa Link URL itu?</button>
+<div class="panel">
+  <p>link URL Undangan website yang kamu dapatkan jika order di jfkreatif.com <br >
+Contoh :<br >
+<a href="#">www.jhkreatif.com/namapengantin</a></p>
+</div>
+
+<button class="accordion">4. Setelah saya Order gimana cara membagikan/share nya?</button>
+<div class="panel">
+  <p>Cukup bagikan Link URL nya ke no WA yang mau di undang atau ke media sosial yang kamu punya, dan udangan pun tersebar</p>
+</div>
+
+<button class="accordion">5. Apakah Undangan Website Ada masa aktifnya?</button>
+<div class="panel">
+  <p>Undanga website Di jfkreatif.com masa aktifnya 2(dua) bulan dari tanggal setelah order</p>
+</div>
+
+<button class="accordion">6. Saya tertarik gimana cara ordernya ?</button>
+<div class="panel">
+<p>Cukup hubungi marketing kami untuk Order undangan website.
+Dan pilih Thema yang kamu suka dan catat kode tema nya
+Dan kirimkan Kode Thema beserta data-data atau poto yang akan di masukan ke undangan website
+<br><br>
+Contoh format pengiriman :<br>
+Type JF:001<br>
+<br>
+Nama pengantin laki-laki<br>
+Anak keberapa<br>
+Nama pengantin wanita<br>
+Putri keberapa<br>
+<br>
+Hari tanggal bulan tahun<br>
+Alamat/Tempat akad<br>
+Alamat/Tempat resepsi<br>
+<br>
+Nama oragtua pengantin pria<br>
+Nama orang tua pengantin wanita<br>
+<br>
+Untuk map kita menggunakan google map<br>
+<br>
+photo yang mau di pajang (jika ada)<br>
+1 photo khusus (jika ada)<br>
+6 photo untuk gallery prewedding(jika ada)<br>
+<br>
+Lakukan pembayaran setelah order kemudian konfirmasi pembayaran
+  </p>
+</div>
+
+<button class="accordion">7. Berapa Lama waktu pengerjaanya?</button>
+<div class="panel">
+  <p>1hari - 3 hari  tergantung anrtian dan banyak nya orderan yang ada di jfkreatif.com
+** waktu berlaku setelah konfirmasi pembayaran
+NB: terkadang hari itu juga langsung jadi</p>
+</div>
+
+<button class="accordion">8. Apakah Saya bisa melihat demonya dan merevisi data atau foto?</button>
+<div class="panel">
+  <p>Bisa banget..
+Jika semua data lengkap dan sudah melahkukan konfirmasi pembayaran
+Kami langsung mengerjakannya
+Dan secepatnya undangan website di garap kemudian mengirim link URL Undangan nya,
+Kamu pun bisa mengakses link URL nya
+Kemudian mengkoreksinya jika ada kesalahan
+Atau ada yang mau di revisi kamu bisa merevisi data atau mengganti foto, hubungi kami untuk revisi
+<br><br>
+**Untuk sementara merevisi data atau foto  cuma bisa 3 kali revisi</p>
+</div>
+
+<button class="accordion">9. Saya Sudah Order Tapi saya pingin ganti Theme apakah bisa?</button>
+<div class="panel">
+  <p>Bisa hanya 1kali perubahan Theme</p>
+</div>
+<!-- end faq content -->
+			</div> <!-- con-faq -->
+		</div>
+	</div>
+</div>
+
+<div class="js-footer">
+	<div class="jscon">
+		<div class="jsrow">
+				<div class="con-footer clearfix">
+					<div class="in-footer bilah-1">
+					
+						<div class="kolom-marketing">
+							<style>
+							.logo-marketing{text-align:center}
+							.logo-marketing a.button{background-color:#4CAF50;display:inline-block;text-decoration:none;padding:10px 20px;color:#fff;}
+							.logo-marketing p{margin:0;margin-bottom:1.5rem;text-align:center}
+							</style>
+							<div class="">
+								<div class="logo-marketing">
+									<p>Untuk Lebih Jelasnya Bisa Hubungi kami on WhatApp </p>
+									<a href="https://api.whatsapp.com/send?phone=6281285869732"><i class="fa fa-whatsapp" aria-hidden="true"></i> Hubungi</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="in-footer bilah-2">
+						<div class="kolom-sosial">
+							<h3> Media Online</h3>
+							<div class="link-mendia-online">
+								
+								<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> instagram</a>
+								<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i> facebook</a>
+								
+							</div>
+						</div>
+					</div>
+				</div><!-- bagian-demo -->
+		</div><!-- -->
+	</div>
+</div>
+
+<style>
+.con-copy-right{padding:3rem 0; text-align:center;text-transform:uppercase;color:#757475}
+</style>
+<footer>
+<div class="jscon">
+		<div class="jsrow">
+				<div class="con-copy-right">
+<span> Copyright </span><i class="fa fa-heart" aria-hidden="true"></i><span> jhkreatif</span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 </body>
 </html>
