@@ -41,7 +41,7 @@ $(document).on('ready', function(){
 
 function linkhome() {
     
-	window.location.href='//jfkreatif.com' 
+	window.location.href='/' 
 }
 
 function waorder(tpud){
