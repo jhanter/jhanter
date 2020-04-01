@@ -1,0 +1,352 @@
+
+@font-face {font-family:'Great Vibes';src: url('../fonts/GreatVibes-Regular.ttf');font-weight: normal;font-style: normal;}
+@font-face {font-family:'Cutive Mono';src: url('../fonts/CutiveMono-Regular.ttf');font-weight: normal;font-style: normal;}
+
+html,body{margin:0;padding:0;}
+body{font-family:"Cutive Mono", serif;font-size:1rem}
+.clearfix::after {content: "";clear: both;display: table;}
+
+/* music background */
+#lagu{display:none;visibility:hidden}
+.gaya{border:2px solid #ffffff;color:#ffffff;background-color:transparent;border-radius:5px;;width:32px;height:32px;cursor:pointer;position:absolute;left:12px;top:12px;}
+.gaya2{border:2px solid #ffffff;color:#ffffff;background-color:transparent;border-radius:5px;;width:32px;height:32px;cursor:pointer;position:absolute;right:12px;top:12px;}
+@media (max-width: 430px){.gaya{left:5px;top:5px;}.gaya2{right:5px;top:5px;}}
+.akad button{border:2px solid #0D5A8C;color:#0D5A8C;background-color:transparent;border-radius:5px;cursor:pointer;padding:5px 15px;font;text-transform: uppercase;}
+
+/* start */
+.js-wrapper{background-color:#fff;background-repeat:no-repeat;background-size:cover;width:100%;height:100vh;box-sizing:border-box;padding:60px 60px;position:relative;}
+@media all and (orientation:portrait) {.js-wrapper{background-image:url("../img/undangan-004/bg-ud-portrait.png");}}
+@media all and (orientation:landscape) {.js-wrapper{background-image:url("../img/undangan-004/bg-ud-landscape.png");}}
+.jscon{background-color:transparent;position:relative;width:100%;height:100%;padding:0.5%;box-sizing:border-box;}
+.jsrow{background-color:transparent;width:100%;height:100%;position:relative;box-sizing:border-box;border:3px solid #ffffff;padding:4%;}
+.jscolum{width:100%;height:100%;position:relative;box-sizing:border-box;border:1px solid white ;background-color:rgba(255,255,255,.7);border-radius:18px;padding:5%;}
+
+/*- main-*/
+.ornamen-top-left,.ornamen-top-right,.ornamen-bottom-left,.ornamen-bottom-right{position:absolute;width:10%;z-index:8}
+@media (max-width: 420px) {
+.ornamen-top-left,.ornamen-top-right,.ornamen-bottom-left,.ornamen-bottom-right{position:absolute;width:20%;z-index:8}
+}
+.ornamen-top-left{left:0;top:0}
+.ornamen-top-right{right:0;top:0}
+.ornamen-bottom-left{bottom:0;left:0}
+.ornamen-bottom-right{bottom:0;right:0}
+.waktu{font-size:130%;;position:absolute;background:transparent;text-align:center;padding:20px;padding-top:15px;left:50%;transform: translateX(-50%);box-sizing:border-box;top:-40px;border-radius:15px 15px 0 0;}
+.waktu span{display:inline-block;text-align:center;letter-spacing: -0.2rem;color:#ffffff}
+
+.navigation-bottom{position:absolute;text-align:center;left:50%;transform: translateX(-50%);box-sizing:border-box;bottom:-47px}
+.navigation-bottom a{display:inline-block;padding:10px 20px;border:2px solid #ffffff;color:#ffffff;background-color:transparent;border-radius:5px;text-decoration:none;}
+.conten-isi{position:relative;width:100%;height:100%;}
+.ud-copy-right{position:absolute;text-align:center;right:0 ;box-sizing:border-box;bottom:-27px;z-index:8;color:#ffffff;}
+
+/*demo undangan*/
+.demo_undangan{position:absolute;z-index:10;width:100%;height:100%;background-color:red;color:#fff}
+.demo_undangan .in_demo_undangan{position:relative;top:50%;left:50%;transform: translate(-50%,-50%);max-width:150px;max-height:150px;text-align:center;}
+.demo_undangan .in_demo_undangan p i{font-size:300%}
+
+/*rotate_your_device*/
+.rotate_your_device{position:absolute;z-index:9;width:100%;height:100%;background-color:#fff;}
+.rotate_your_device_conten{position:relative;top:50%;left:50%;transform: translate(-50%,-50%);max-width:150px;max-height:150px;text-align:center;}
+.rotate_your_device_conten img{width:50%;}
+.rotate_your_device{display:none}
+
+/* responsive layout */
+@media (max-width:1023px) and (orientation:landscape) {
+	.rotate_your_device{display:inherit}
+}
+
+@media (max-width: 768px) and (min-width: 640px){
+.js-wrapper{padding:50px 50px;}
+}
+@media (max-width: 639px) and (min-width: 460px){
+.js-wrapper{padding:50px 30px;}
+.waktu{font-size:110%;padding:15px;padding-top:15px;}
+.navigation-bottom{bottom:-38px}
+.navigation-bottom a{padding:5px 10px}
+}
+@media (max-width: 459px) and (min-width: 340px){
+.js-wrapper{padding:40px 10px;}
+.waktu{font-size:117%;padding:0;padding-top:15px;}
+.navigation-bottom{bottom:-32px}
+.navigation-bottom a{padding:5px 10px}
+.jscolum{padding:3%;}
+}
+@media (max-width: 339px) and (min-width: 240px){
+.js-wrapper{padding:40px 10px;}
+.waktu{font-size:110%;padding:0;padding-top:15px;}
+.navigation-bottom{bottom:-32px}
+.navigation-bottom a{padding:5px 10px}
+.jscolum{padding:3%;}
+}
+
+/*-------------------------------------------
+Preloader
+---------------------------------------------*/
+.page-loader {
+background: #fff;
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+z-index: 9998;
+}
+.loader {
+background: #666;
+position: absolute;
+display: inline-block;
+height: 40px;
+width: 40px;
+left: 50%;
+top: 50%;
+margin: -20px 0 0 -20px;
+text-indent: -9999em;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+-webkit-animation: ball-scale 1s 0s ease-in-out infinite;
+animation: ball-scale 1s 0s ease-in-out infinite;
+}
+@-webkit-keyframes ball-scale {
+0% {
+-webkit-transform: scale(0);
+-moz-transform: scale(0);
+-ms-transform: scale(0);
+-o-transform: scale(0);
+transform: scale(0);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+}
+@keyframes ball-scale {
+0% {
+-webkit-transform: scale(0);
+-moz-transform: scale(0);
+-ms-transform: scale(0);
+-o-transform: scale(0);
+transform: scale(0);
+}
+100% {
+opacity: 0;
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+}
+/*-------------------------------------------
+end Preloader
+-------------------------------------------*/
+
+
+/* welcome */
+.welcome-undangan{position:absolute;width:100%;height:100%;background-color:#fff;z-index:9;text-align:center}
+.welcome-kata-kata{top:50%;transform: translateY(-50%);position:relative;box-sizing:border-box;padding:2em;max-width:320px;margin-right:auto;margin-left:auto}
+
+
+/*-hal 1 -home */
+.isi-conten-isi{position:absolute;left:50%;top:50%;transform: translate(-50%,-50%);text-align:center;color:#0D5A8C;width:100%}
+h2.title-wedding{font-family:"Great Vibes",cursive;font-size:400%;margin:0;padding:0;margin-bottom:1rem;}
+p.tanggal-waktu{margin:0;padding:0;font-size:130%}
+p.nama-pengantin{font-size:300%;letter-spacing: -0.3rem;}
+
+/* ------------------------------
+4. slider_jv 
+---------------------------------*/
+#slider_jv{background-color:transparent;width: 100%;position:relative;height:100%;}
+#liderjf{background-color:transparent;width: 100%;position:relative;height:100%;}
+.slick-track{position:relative;height:100%}
+/* Arrows */
+.slick-prev,.slick-next{font-size: 0;line-height: 0;position: absolute;top: 50%;display: block;width: 20px;height: 20px;padding: 0;-webkit-transform: translate(0, -50%);-ms-transform: translate(0, -50%);transform: translate(0, -50%);cursor: pointer;color: transparent;border: none;outline: none;background: transparent;}
+.slick-prev:hover,.slick-prev:focus,.slick-next:hover,.slick-next:focus{color: transparent;outline: none;background: transparent;}
+.slick-prev:hover:before,.slick-prev:focus:before,.slick-next:hover:before,.slick-next:focus:before{opacity: 1;}
+.slick-prev.slick-disabled:before,.slick-next.slick-disabled:before{opacity: .25;}
+.slick-prev:before,.slick-next:before{font-family: 'FontAwesome';font-size: 20px;line-height: 24px;opacity: .75;color: rgb(0, 0, 0);-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.slick-prev{left: 25px;z-index:6;}[dir='rtl'] .slick-prev{right: 25px;left: auto;}
+.slick-prev:before{content: '\f053';}[dir='rtl'] .slick-prev:before{content: '\f053';}
+.slick-next{right: 25px;z-index:6;}[dir='rtl'] .slick-next{right: auto;left: 25px;}
+.slick-next:before{content: '\f054';}[dir='rtl'] .slick-next:before{content: '\f054';}
+
+/* Dots */
+.slick-dotted.slick-slider{ margin-bottom: 0;}
+.slick-dots{position: absolute;bottom: 24px;display: block;width: 100%;padding: 0;margin: 0;list-style: none;text-align: center;}
+.slick-dots li{position: relative;display: inline-block;width: 20px;height: 20px;margin: 0 5px;padding: 0;cursor: pointer;}
+.slick-dots li button{font-size: 0;line-height: 0;display: block;width: 20px;height: 20px;padding: 5px;cursor: pointer;color: transparent;border: 0;outline: none;background: transparent;}
+.slick-dots li button:hover,.slick-dots li button:focus{outline: none;}
+.slick-dots li button:hover:before,.slick-dots li button:focus:before{opacity: 1;}
+.slick-dots li button:before{font-family: 'FontAwesome';font-size: 14px;line-height: 20px;position: absolute;top: 0;left: 0;width: 20px;height: 20px;content: '\f10c';text-align: center;opacity: .25;color: black;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.slick-dots li.slick-active button:before{opacity: .75;color: black;}
+.jf-content{position:relative}
+
+/*-- poto pengantin */
+.foto-berdua{position:relative;width:100%;height:100%;}
+.foto-berdua .float{float:left;width:50%;height:100%;position:relative}
+.foto-berdua .float.textkata{}
+
+.text-kata-kata{position:absolute;padding:10%;left:50%;top:50%;transform: translate(-50%,-50%);box-sizing:border-box;width:100%}
+.text-kata-kata p{text-align:center;color:#0D5A8C;}
+.mage-poto-berdua{object-fit:cover;width:100%;height:100%;border-radius:20px}
+/*-efex  */
+@keyframes ancul{
+0%{transform:translateY(0);}
+100%{transform:translateY(10px);}
+}
+.wrap-img{
+animation:ancul 1.5s;
+animation-direction:alternate;
+animation-iteration-count:infinite
+}
+
+
+/* gallery */
+.undangan-gallery{position:relative;width:100%;height:100%;}
+.in-gallery{max-width:670px;height:100%;position:relative;margin:0 auto;}
+.content-gallery h3{margin:0;padding:0;text-align:center;margin-bottom:2rem;color:#0D5A8C}
+.isi-gallery{position:relative;}
+/*update galery*/
+.isi-gallery a{float:left;width:33.3333333%;;box-sizing:border-box;padding:10px;}
+.isi-gallery a img{object-fit:cover;width:100%;height:100%;border:3px solid #0D5A8C;border-radius:1rem}
+@media (min-width:1025px ){
+	.in-gallery{overflow-y:scroll}
+}
+@media (max-width:768px ){
+	.isi-gallery a{width:50%}
+}
+.conten-img{position:relative;width:100%;height:100%;}
+@media all and (orientation:portrait) {
+.content-gallery{top:50%;transform: translateY(-50%);position:relative}
+}
+@media all and (orientation:landscape) {}
+
+/*-hal 3 -akad & resepsi */
+
+.akad p{margin-bottom:2rem}
+p.akad-nama-mempelai{font-family:'Great Vibes',serif;font-size:200%;line-height:1.5em;margin-bottom:0.1rem !important}
+.akad{width:100%;position:relative;color:#0D5A8C;height:100%;left:50%;top:50%;transform: translate(-50%,-50%);box-sizing:border-box;line-height: 1rem;}
+.isi-akad{background-color:transparent;overflow-y:scroll;max-width:100%;height:100%;position:relative;margin:0 auto}
+.dalam-isi-akad{padding:5% 10%;text-align:center;position:relative}
+@media all and (orientation:landscape) {}
+@media all and (orientation:portrait) {.dalam-isi-akad{top:50%;transform: translateY(-50%)}}
+img.akad-ornamen-left-top{width:100%;position:absolute;left:0;top:0}
+img.akad-ornamen-left-bottom{width:100%;position:absolute;left:0;bottom:0}
+.title-kapital{text-transform:uppercase;letter-spacing:0.1rem}
+.akad-bottom{padding-bottom:1rem}
+.ortu-nama{margin:0;margin-bottom:2rem !important}
+
+
+
+
+
+/*--buku tamu */
+h3.title-buku-tamu{text-align:center;color:#0D5A8C}
+p.destkripsi-buku-tamu{text-align:center;color:#0D5A8C}
+.buku-tamu{width:100%;height:100%;position:relative;}
+/*responsive hal*/
+@media (min-width: 768px)  and (orientation:portrait){
+/*-hal 1 */
+h2.title-wedding{font-size:310%}
+
+/*-hal 3 -akad  & resepsi */
+
+.akad p{margin-bottom:2rem;font-size:120%;line-height:1.5}
+p.akad-nama-mempelai{font-size:210%}
+.akad{width:100%;padding:0}
+.dalam-isi-akad{padding:2% 5%;}
+.nama-ortu{width:100%;position:relative;height:70px}
+.nama-ortu{position:relative;font-size:80%;}
+
+/*poto berdua */
+.foto-berdua .float{float:none;width:100%;height:50%}
+.text-kata-kata p{font-size:130%}
+}
+@media (max-width:767px ){
+	.foto-berdua .float{float:none;width:100%;height:50%}
+	.ud-copy-right{font-size:0.7rem}
+
+	
+}
+@media (max-width: 640px) and (min-width: 460px){
+/*-hal 1 */
+h2.title-wedding{font-size:200%}
+p.tanggal-waktu{margin:0;padding:0;font-size:90%}
+p.nama-pengantin{font-size:140%;letter-spacing: -0.1rem;}
+
+/*-hal 3 -akad  & resepsi */
+p.akad-nama-mempelai{font-size:170% !important}
+.akad p{margin-bottom:1rem;font-size:90%}
+.nama-ortu{width:100%;position:relative;height:auto}
+.nama-ortu div:nth-last-child(1){left:inherit}
+.nama-ortu div:nth-last-child(2){right:inherit}
+}
+
+@media (max-width: 459px) and (min-width: 321px){
+	/*-hal 1 */
+	
+	h2.title-wedding{font-size:190%}
+p.tanggal-waktu{margin:0;padding:0;font-size:90%}
+p.nama-pengantin{font-size:140%;letter-spacing: -0.1rem;}
+
+	.akad p{font-size:90%}
+	h2.title-wedding {font-size: 250%;}
+	p.nama-pengantin {font-size: 200%;}
+	/*-- hal akad & resepsi */
+	p.akad-nama-mempelai {font-size: 170%;}
+	
+}
+
+@media (max-width: 320px) and (min-width: 240px){
+/*-hal 1 */
+h2.title-wedding{font-size:200%}
+p.tanggal-waktu{margin:0;padding:0;font-size:70%}
+p.nama-pengantin{font-size:120%;letter-spacing: -0.1rem;}
+
+/*-hal 3 -akad  & resepsi */
+.akad p{margin-bottom:1rem;font-size:70%}
+p.akad-nama-mempelai{font-size:120%}
+.akad{width:100%;padding:5% 8%;}
+.dalam-isi-akad{padding:2% 5%;}
+
+.nama-ortu{width:80%;position:relative;height:auto;font-size:55%;margin:0 auto}
+.nama-ortu div:nth-last-child(1){left:inherit}
+.nama-ortu div:nth-last-child(2){right:inherit}
+.nama-ortu-masing-masing{position:relative;line-height:1rem;text-align:center;padding-left:26px;box-sizing:border-box}
+.nama-ortu-masing-masing::before{top:0.5rem;}
+.nama-ortu-masing-masing::after{height:1px;width:calc(100% - 26px)}
+
+/*poto berdua */
+.text-kata-kata p{font-size:88%}
+
+}
+
+@media (max-width: 740px) and (min-width: 360px) and (orientation:landscape){
+/*-hal 1 */
+h2.title-wedding{font-size:220%}
+p.tanggal-waktu{margin:0;padding:0;font-size:100%}
+p.nama-pengantin{font-size:150%;letter-spacing: -0.1rem;}
+}
+
+@media (max-width: 896px) and (min-width: 375px) and (orientation:landscape){
+/*-hal 1 */
+h2.title-wedding{font-size:225%}
+p.tanggal-waktu{margin:0;padding:0;font-size:106%}
+p.nama-pengantin{font-size:155%;letter-spacing: -0.1rem;}
+}
+@media all and (orientation:landscape) {}
+@media all and (orientation:portrait) {
+/*-hal 3 -akad  & resepsi */
+.dalam-isi-akad{top:50%;transform: translateY(-50%)}
+}
+
+/*======== bug masih ada masih kurang mantanp di ukuran yang lainya ======*/
+@media (max-width: 320px ) and (max-height:480px ) and (orientation:portrait) {
+/*-hal 3 -akad  & resepsi */
+.dalam-isi-akad{top:0;transform: translateY(0)}
+}

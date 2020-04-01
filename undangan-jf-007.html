@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Wedding Sarju & Fitra</title>
+    <link rel="icon" href="img/icons/favicon.png">
+    <meta name="description" content="HTML Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- All CSS files included -->
+    <link href="" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/simplelightbox.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" href="css/ud007.css">
+	
+</head>
+<body>
+<div id='fb-root'></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v6.0"></script>
+
+<!-- Preloader-->
+<div class='page-loader'>
+<div class='loader'>Loading...</div>
+</div>
+<!-- Preloader -->
+
+<div id="welcome" class="welcome-undangan">
+	<div class="welcome-kata-kata">
+		<h3> Selamat Datang </h3>
+		<p>di undangan online kami</p>
+		<p> untuk melihat tiap halaman gunakan tombol di bawah atau bisa geser kiri atau kanan mengunakan jari anda..<br><br><b><i>Tap untuk melanjutakan</i></b></p>
+	</div>
+</div><!-- welcome-undangan -->
+
+<style>
+
+</style>
+<button style="z-index:7" class="gaya2" id="fullscreen"><i class="fa fa-compress" aria-hidden="true"></i></button>
+<button style="z-index:7" class="play gaya" id="btn1"><i class="fa fa-volume-off"></i></button>
+<div class="viewer" style="position:absolute;z-index:999;display:none"></div>
+<div id="wrapper-audio">
+			<audio  id="sound1" preload="auto" controls loop>
+				<source src="music/DEENA-SSALAM-bg.mp3">
+			</audio>
+</div>
+
+<canvas id="canvas" style="position:absolute;z-index:1"></canvas>
+<div class="js-wrapper">
+	<div class="jscon">
+		<div id="waktuh" class="waktu"><b><span>0</span> <span>-</span> <span>0</span> <span>-</span> <span>0</span> <span>-</span> <span>0</span></b> </div>
+	    <img class="ornamen-top-left" src="img/undangan-007/ornamen-ud-top-left.png" />
+		<img class="ornamen-top-right" src="img/undangan-007/ornamen-ud-top-right.png" />
+		<img class="ornamen-bottom-left" src="img/undangan-007/ornamen-ud-bottom-left.png" />
+		<img class="ornamen-bottom-right" src="img/undangan-007/ornamen-ud-bottom-right.png" />
+		<div class="jsrow">
+			<div class="jscolum">
+				<div class="conten-isi" style="z-index:7">
+				    
+					<div id="slider_jv">
+	<div id="sliderjf" >
+		<div class="jf-content" relna="jfhome"></div><!-- jf-content -->
+		<div class="jf-content" relna="jfkata"></div><!-- jf-content -->
+		<div class="jf-content" relna="jfakad"></div><!-- jf-content -->
+		<div class="jf-content" relna="jfresepi"></div><!-- jf-content -->
+		<div class="jf-content" relna="jfgallery"></div><!-- jf-content -->
+		<div class="jf-content" relna="jfbukutamu" style="overflow-y:scroll"></div><!-- jf-content -->
+	</div>
+</div>	
+
+					
+					
+				</div><!-- conten-isi -->
+			</div>
+		</div>
+		<div class="navigation-bottom" style="z-index:7">
+		
+		  <a href="#" class="fa fa-caret-left mundur"></a> 
+		  <a href="#" class="fa fa-caret-right maju"></a>
+		  
+		</div>
+		
+		<a href="https://jhanter.github.io" class="ud-copy-right">CP|Jh Online</a>
+	</div>
+</div>
+
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/simple-lightbox.min.js"></script> 
+	<script src="js/slick.min.js"></script>
+	
+	<script>
+$(document).on('ready', function() {
+
+$('#sliderjf').jfkreatif({waktu:"Mar 27, 2020 08:00:00"});
+
+$(".mundur").click(function(){$("#sliderjf").find(".slick-arrow").first().trigger("click")}),$(".maju").click(function(){$("#sliderjf").find(".slick-arrow").last().trigger("click")}),$("#sliderjf").find(".slick-arrow").css("display","none"),$("#sliderjf").find(".slick-dots").css("display","none");var elem=document.documentElement;function openFullscreen(){elem.requestFullscreen?elem.requestFullscreen():elem.mozRequestFullScreen?elem.mozRequestFullScreen():elem.webkitRequestFullscreen?elem.webkitRequestFullscreen():elem.msRequestFullscreen&&elem.msRequestFullscreen()}function closeFullscreen(){document.exitFullscreen?document.exitFullscreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitExitFullscreen?document.webkitExitFullscreen():document.msExitFullscreen&&document.msExitFullscreen()}$("button#fullscreen").click(function(){var e=$(this);e.toggleClass("fullscreen"),e.hasClass("fullscreen")?(e.html('<i class="fa fa-expand" aria-hidden="true"></i>'),openFullscreen()):(e.html('<i class="fa fa-compress" aria-hidden="true"></i>'),closeFullscreen())}),$("button#btn1").click(function(){var e=$(this),l=e.attr("id").replace(/btn/,"");e.toggleClass("active"),e.hasClass("active")?(e.html('<i class="fa fa-volume-up"></i>'),$('audio[id^="sound"]')[l-1].play()):(e.html('<i class="fa fa-volume-off"></i>'),$('audio[id^="sound"]')[l-1].pause())}),$("#wrapper-audio").css({visibility:"hidden",display:"none"});var win=$(window);win.on("load",function(){$(".page-loader").delay(350).fadeOut("slow")}),$("#welcome").on("click",function(){$("#btn1").trigger("click"),$("#welcome").fadeOut("slow"),$("button#fullscreen").trigger("click")});var nolandscape=window.matchMedia("(orientation:landscape) and (max-width: 760px)");nolandscape.matches&&(document.getElementsByTagName("BODY")[0].innerHTML="<div class='rotate_your_device'><div class='rotate_your_device_conten'><img src='img/rotate_your_device.png' /><p> Rotate Your Device </p></div></div>"),$(window).bind("orientationchange",function(e){location.reload(!0)});
+});
+!function(a){a.fn.jfkreatif=function(i){var t=a.extend({expireddemo:"Mar 26, 2040 17:00:00",pria:"Juju",prianamalengkap:"Juju Sarju",nmaortupp:"Warto",nmaortupw:"Karwi",wanita:"Fitra",wanitanamalengkap:"Fitra Ramdiani",nmaortuwp:"Idrus",nmaortuww:"Yeyet Haryati",waktu:"Jun 20, 2020 08:00:00",nikah:"The Wedding",waktunikah:"Rabu, 20 Juni 2018",tempatnikah:"Pamalayan , 20 Juni 2018",photoberdua:"img/poto-undangan-berdua.jpg",ceritacinta:"<p>&quot;Pertama Ketemu Biasa saja<br> Jalan bareng pun masih tiada rasa, eh......mungkin lama-lama terbiasa, dan ahiranya kita mulai ada rasa, dan kemudian saling jatuh cinta, pada akhirnya kita memutuskan menikah saja&quot;</p>",akad:"Pukul : 8.00 WIB s.d Selesai Bertempat di Kediaman Mempelai Wanita Dusun Pende RT/010 RW 03 Desa Pamalayan Kec.Cijeungjing Kab Ciamis",resepsi:"Pukul : 8.30 WIB s.d Selesai Dusun Pende RT/010 RW 03 Desa Pamalayan Kec.Cijeungjing Kab Ciamis",mapakad:"https://www.google.com/maps/@-7.3298566,108.3989973,3a,75y,357.47h,67.6t/data=!3m6!1e1!3m4!1swml7UN9xOlV0UT0ccIynjw!2e0!7i13312!8i6656",mapresepsi:"https://www.google.com/maps/@-7.3298566,108.3989973,3a,75y,357.47h,67.6t/data=!3m6!1e1!3m4!1swml7UN9xOlV0UT0ccIynjw!2e0!7i13312!8i6656",titlegallery:"Gallery",poto1:"img/gallery/ab.jpg",poto2:"img/gallery/ac.jpg",poto3:"img/gallery/ad.jpg",poto4:"img/gallery/ae.jpg",poto5:"img/gallery/af.jpg",poto6:"img/gallery/ag.jpg",titlebukutamu:"Buku Tamu",deskripsibukutamu:"Mohon do'a Restunya ya",urlbukutamu:"https://jhanter.github.io/tesfull/",ccby:"jhcreative",ccKontak:"081285869732"},i);return this.each(function(){var i=a(this),e=i.find(".jf-content");a(window).on("resize",function(){var a=i.parent().height();e.css("height",a+"px")}).resize(),e.each(function(e){var n=a(this);if(n.addClass("warna"+e),"jfhome"==n.attr("relna"))n.html("<div class='isi-conten-isi' data-halaman='harep'><h2 class='title-wedding'>"+t.nikah+"</h2><p class='tanggal-waktu'>"+t.waktunikah+"</p><p class='nama-pengantin'>"+t.pria+" & "+t.wanita+" </p><div class='wrap-img'><img src='' /></div></div>");else if("jfkata"==n.attr("relna"))n.html("<div class='foto-berdua clearfix' data-halaman='katakata'><div class='float'><img class='mage-poto-berdua wrap-img' src='"+t.photoberdua+"' /></div> <div class='float textkata'><div class='text-kata-kata'>"+t.ceritacinta+"</div></div></div>");else if("jfakad"==n.attr("relna"))n.html("<div class='akad' data-halaman='akad'><div class='isi-akad'><div class='dalam-isi-akad'><p>"+t.tempatnikah+"</p><p>Menikah</p><p class='akad-nama-mempelai'>"+t.prianamalengkap+"</p><p class='ortu-nama'>Putra dari Bpk."+t.nmaortupp+" & Ibu "+t.nmaortupw+"</p><p>Dengan</p><p class='akad-nama-mempelai'>"+t.wanitanamalengkap+"</p><p class='ortu-nama'>Putri dari Bpk."+t.nmaortuwp+" & Ibu "+t.nmaortuww+"</p></div></div></div>");else if("jfresepi"==n.attr("relna"))n.html("<div class='akad' data-halaman='resepsi'><div class='isi-akad'><div class='dalam-isi-akad clearfix'><div class='akad-bottom'><p class='title-kapital'>Akad</p><p>"+t.waktunikah+" "+t.akad+" </p><button onclick='location.href=&#39;"+t.mapakad+"&#39;'> Go map</button></div><div class='akad-bottom'><p class='title-kapital'>Resepsi</p><p>"+t.waktunikah+" "+t.resepsi+"</p><button onclick='location.href=&#39;"+t.mapresepsi+"&#39;'> Go map</button></div></div></div></div>");else if("jfgallery"==n.attr("relna")){n.html("<div class='undangan-gallery' data-halaman='gallery'><div class='in-gallery'><div class='content-gallery'><h3>"+t.titlegallery+"</h3><div class='isi-gallery clearfix'><a href="+t.poto1+"><div class='conten-img'><img src="+t.poto1+" /></div></a><a href="+t.poto2+"><div class='conten-img'><img src="+t.poto2+" /></div></a><a href="+t.poto3+"><div class='conten-img'><img src="+t.poto3+" /></div></a><a href="+t.poto4+"><div class='conten-img'><img src="+t.poto4+" /></div></a><a href="+t.poto5+"><div class='conten-img'><img src="+t.poto5+" /></div></a><a href="+t.poto6+"><div class='conten-img'><img src="+t.poto6+" /></div></a></div></div></div></div>");var s=n.find(".isi-gallery");a(window).on("resize",function(){var a=s.children("a"),i=a.width();a.css("height",i+"px")}).resize(),i.on("init",function(a,i){s.find("a").simpleLightbox()})}else"jfbukutamu"==n.attr("relna")&&(n.html("<h3 class='title-buku-tamu'>"+t.titlebukutamu+"</h3><p class='destkripsi-buku-tamu'>"+t.deskripsibukutamu+"</p><div class='buku-tamu' data-halaman='bukutamu'></div>"),i.on("init",function(a,i){n.find(".buku-tamu").html("<div class='fb-comments' data-href="+t.urlbukutamu+" data-width='100%' data-numposts='5'></div>")}))}),i.slick({dots:!0,infinite:!0,speed:500,slidesToShow:1,slidesToScroll:1});var n=new Date(t.expireddemo).getTime(),s=setInterval(function(){var a=(new Date).getTime();n-a<0&&(clearInterval(s),document.getElementsByTagName("BODY")[0].innerHTML="<div class='demo_undangan'><div class='in_demo_undangan'><p><i class='fa fa-cogs'></i></p><p> Demo Expired </p></div></div>")},1e3),l=new Date(t.waktu).getTime(),d=setInterval(function(){var a=(new Date).getTime(),i=l-a,t=Math.floor(i/864e5),e=Math.floor(i%864e5/36e5),n=Math.floor(i%36e5/6e4),s=Math.floor(i%6e4/1e3);document.getElementById("waktuh").innerHTML="<b><span>"+t+"</span><span>-</span><span>"+e+"</span><span>-</span><span>"+n+"</span><span>-</span><span>"+s+"</span></b>",i<0&&(clearInterval(d),document.getElementById("waktuh").innerHTML="<span>Acara Telah Selesai</span>")},1e3)})}}(jQuery);
+</script>
+<script>
+!function(){var e=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame||function(e){window.setTimeout(e,1e3/60)};window.requestAnimationFrame=e}();var flakes=[],canvas=document.getElementById("canvas"),ctx=canvas.getContext("2d"),flakeCount=400,mX=-100,mY=-100;function snow(){ctx.clearRect(0,0,canvas.width,canvas.height);for(var e=0;e<flakeCount;e++){var a=flakes[e],t=mX,n=mY,i=a.x,o=a.y,s=Math.sqrt((i-t)*(i-t)+(o-n)*(o-n));if(s<150){var r=(t-i)/s,d=(n-o)/s,c=150/(s*s)/2;a.velX-=c*r,a.velY-=c*d}else a.velX*=.98,a.velY<=a.speed&&(a.velY=a.speed),a.velX+=Math.cos(a.step+=.05)*a.stepSize;ctx.fillStyle="rgba(255,255,255,"+a.opacity+")",a.y+=a.velY,a.x+=a.velX,(a.y>=canvas.height||a.y<=0)&&reset(a),(a.x>=canvas.width||a.x<=0)&&reset(a),ctx.beginPath(),ctx.arc(a.x,a.y,a.size,0,2*Math.PI),ctx.fill()}requestAnimationFrame(snow)}function reset(e){e.x=Math.floor(Math.random()*canvas.width),e.y=0,e.size=3*Math.random()+2,e.speed=1*Math.random()+.5,e.velY=e.speed,e.velX=0,e.opacity=.5*Math.random()+.3}function init(){for(var e=0;e<flakeCount;e++){var a=Math.floor(Math.random()*canvas.width),t=Math.floor(Math.random()*canvas.height),n=3*Math.random()+2,i=1*Math.random()+.5,o=.5*Math.random()+.3;flakes.push({speed:i,velY:i,velX:0,x:a,y:t,size:n,stepSize:Math.random()/30,step:0,opacity:o})}snow()}canvas.width=window.innerWidth,canvas.height=window.innerHeight,canvas.addEventListener("mousemove",function(e){mX=e.clientX,mY=e.clientY}),window.addEventListener("resize",function(){canvas.width=window.innerWidth,canvas.height=window.innerHeight}),init();
+</script>
+</body>
+</html>

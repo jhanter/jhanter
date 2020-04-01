@@ -1,0 +1,486 @@
+html,body{margin:0;padding:0;font-family: 'Montserrat';line-height:1.7em;background-color:#ddd;font-size:0.9375rem;color:#757475;}
+a.button{background-color:#4CAF50;display:inline-block;text-decoration:none;padding:10px 20px;color:#fff;}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+/*global*/
+.clearfix::after {content: "";clear: both;display: table;}
+.line-bawah{width:43px;height:2px;background-color:#fff}
+.line-bawah.jfdark{background-color:#333}
+ul{margin:0;padding:0}
+h4{margin:0;margin-bottom:0}
+hr{border:0;height:1px;background:#333;background-image:linear-gradient(to right,#ccc, #333, #ccc)}
+/*JFKREATIFMOBILE */
+.jfkreatifmobile{max-width:767px;margin:0 auto;background-color:#fff}
+/*ORNAMEN JFKREATIF*/
+.ornamenjfkreatif{width:100%;}
+.ornamenjfkreatif .ornamen{width:33.33333333%;float:left;position:relative;height:3px;}
+.ornamenjfkreatif .ornamen.color1{background-color:#0064D2}
+.ornamenjfkreatif .ornamen.color2{background-color:#FFCC00}
+.ornamenjfkreatif .ornamen.color3{background-color:#FFFF00}
+/* menu pop up */
+.menu_pop_up,.menu_pop_up2{
+position: fixed;
+z-index:9999;
+width:calc(100%);
+background: linear-gradient(to bottom left, #5719D1, #0064D2 );
+height:100vh;
+margin: 0 auto;
+overflow: hidden;
+}
+.menu_pop_up .inner_menu_pop_up,.menu_pop_up2 .inner_menu_pop_up{
+  color: white;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+}
+.menu_pop_up .inner_menu_pop_up ul li a,.menu_pop_up2 .inner_menu_pop_up ul li a{
+    padding: 24px 0;
+    font-size: 16px;
+    line-height:24px;
+    display: block;
+    text-decoration: none;
+    color:#ffffff
+}
+.menu_pop_up .inner_menu_pop_up ul li a:hover,.menu_pop_up2 .inner_menu_pop_up ul li a:hover{
+    background-color: #FFCC00;
+	color:#333;
+	font-weight:600;
+}
+.menu_pop_up .button_close_jv,.menu_pop_up2 .button_close_jv{
+    top:48px;
+    right:40px;
+    position: absolute;
+	color:#fff;
+	font-weight:600;
+	text-decoration:none;
+}
+
+.menu_pop_up ul,.menu_pop_up2 ul{
+text-align: center
+}
+
+.menu_pop_up,.menu_pop_up2{
+    opacity: 0;
+    visibility: hidden;
+}
+.menu_pop_up.show-menu,.menu_pop_up2.show-menu{
+    opacity: 1; 
+    visibility: visible;
+}
+
+/*MENUJFKRATIF:ubuwaits.github.io/css3-buttons/*/
+.jfkreatifmenu{width:100%;position:relative;background-color:#fff;box-sizing:border-box;padding:0 11px;box-shadow:0 5px 5px rgba(0,0,0, 0.3);z-index:9}
+.jfkreatifmenu .jfmenu{height:40px;float:left;width:33.33333333%;position:relative}
+.jfkreatif-logo img{position:relative;top:50%;transform:translateY(-50%);}
+.jfkreatif-tombol a img{display:block;position:absolute;top:50%;transform:translateY(-50%);right:20%}
+button.shiny-blue {
+  top:50%;transform:translateY(-50%);
+  position:relative;
+  box-sizing:border-box;
+  background-color: #759ae9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #91E34E), color-stop(50%, #91E34E), color-stop(50%, #43D417), color-stop(100%, #43D417));
+  background-image: linear-gradient(top, #41B31B 0%,#41B31B 50%, #41B31B 50%, #41B31B 100%);
+  border-top: 1px solid #41B31B;
+  border-right: 1px solid #41B31B;
+  border-bottom: 1px solid #41B31B;
+  border-left: 1px solid #41B31B;
+  border-radius: 4px;
+  color: #fff;
+  font: bold 12px/1 "Montserrat";
+  padding: 10px 0;
+  text-shadow: 0 -1px 1px #41B31B;
+  width:100%; }
+  button.shiny-blue:hover {
+    background-color: #5d89e8;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #71D122), color-stop(50%, #71D122), color-stop(50%, #34BF0A), color-stop(100%,#34BF0A));
+    background-image: linear-gradient(top, #41B31B 0%, #41B31B 50%, #41B31B9 50%, #41B31B 100%);
+    cursor: pointer; }
+  button.shiny-blue:active {
+    border-top: 1px solid #34BF0A;
+    border-right: 1px solid #34BF0A;
+    border-bottom: 1px solid #34BF0A;
+    border-left: 1px solid #34BF0A;
+    box-shadow: inset 0 0 5px 2px #41B31B, 0 1px 0 #eeeeee; }
+	
+	button.shiny-blue2 {
+  top:50%;transform:translateY(-50%);
+  position:relative;
+  box-sizing:border-box;
+  background-color: #0064D2;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1F8BFF), color-stop(50%, #1F8BFF), color-stop(50%,#006FE6 ), color-stop(100%,#006FE6 ));
+  background-image: linear-gradient(top, #006FE6 0%,#006FE6 50%, #006FE6 50%, #006FE6 100%);
+  border-top: 1px solid #005ABA;
+  border-right: 1px solid #005ABA;
+  border-bottom: 1px solid #005ABA;
+  border-left: 1px solid #005ABA;
+  border-radius: 4px;
+  color: #fff;
+  font: bold 12px/1 "Montserrat";
+  padding: 10px 0;
+  text-shadow: 0 -1px 1px #005ABA;
+  width:100%; }
+  
+  button.shiny-blue2:hover {
+    background-color: #0064D2;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #057EFF), color-stop(50%, #057EFF), color-stop(50%, #0064D2), color-stop(100%,#0064D2));
+    background-image: linear-gradient(top, #0064D2 0%, #0064D2 50%, #0064D2 50%, #0064D2 100%);
+    cursor: pointer; }
+  button.shiny-blue2:active {
+    border-top: 1px solid #0064D2;
+    border-right: 1px solid #0064D2;
+    border-bottom: 1px solid #0064D2;
+    border-left: 1px solid #0064D2;
+    box-shadow: inset 0 0 5px 2px #0064D2, 0 1px 0 #eeeeee; }
+	
+	
+	
+	
+/*SLICK SLIDER*/
+#slider_jv{
+background-color: #232332;
+width: 100%;
+}
+
+#slider_jv div.images_jv{
+    height:240px;
+    width: calc(100%)
+}
+#slider_jv .images_jv.one{
+    background: linear-gradient(to bottom left, #5719D1, #FF1CC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+#slider_jv .images_jv.two{
+    background: linear-gradient(to bottom left, #FFF200, #FF2121); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+#slider_jv .images_jv.tree{
+    background: linear-gradient(to bottom left, #38FF6A, #009BF5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+
+#slider_jv div img{max-width:320px;margin:0 auto}
+
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    line-height: 24px;
+
+    opacity: .75;
+    color: rgb(0, 0, 0);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: 25px;
+    z-index:6;
+}
+[dir='rtl'] .slick-prev
+{
+    right: 25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '\f053';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '\f053';
+}
+
+.slick-next
+{
+    right: 25px;
+    z-index:6;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: 25px;
+}
+.slick-next:before
+{
+    content: '\f054';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '\f054';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 0;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: 24px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '\f10c';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+
+/*jfkreatif-hero-text*/
+.jfkreatif-hero-text{position:relative;border-radius:6px;height:80px;background-color:#fff;box-shadow:0px 0px 20px rgba(0,0,0, 0.3);margin: 0 11px;margin-top:-25px;box-sizing:border-box;z-index:9;padding:0.8rem;display:flex;align-items:center}
+.jfkreatif-hero-text{font-size:0.7rem;line-height:0.9rem;font-family:"Montserrat";font-weight:bold}
+.jfkreatif-hero-text:after{content:"";position:absolute;right:0;bottom:0;width:60%;height:0;border-bottom:40px solid #FFCC00;border-left:20px solid transparent;border-top:40px solid #FFCC00;box-sizing:border-box;border-top-right-radius:6px;border-box;border-bottom-right-radius:6px}
+.text-style{background:linear-gradient(to right,#0064D2, red);-webkit-background-clip:text;-webkit-text-fill-color:transparent;width:calc( 40% + 20px)}
+.icon-ud-website{text-align:center}
+.icon-ud-website span{font-size:0.5rem;line-height:0.7rem;display:block}
+div.jfkicon{width:calc( 30% - 10px);z-index:10;box-sizing:border-box;}
+.thumb-icon img{}
+
+/*jfkreatif-content*/
+.jfkreatif-content{padding-bottom:30px;padding-top:15px;}
+.top-conten-undangan{display:flex;box-sizing:border-box;padding:15px 11px;position:relative}
+.top-conten-undangan div[class*="atas-"]{width:50%;font-weight:600;}
+.top-conten-undangan div.atas-kanan{text-align:right}
+.top-conten-undangan div.atas-kanan a{text-decoration:none}
+
+
+.jfthumbnail{box-sizing:border-box;padding:0.6rem}
+.jfthumbnail a img{width:100%;}
+.jf-thumb.slick-active .jfthumbnail img{}
+.jf-thumb .title-type{text-align:center}
+.jf-thumb .title-type .judul_type{border:1px solid #0064D2;padding:2px 15px;display:inline-block;text-align:center;border-radius:50px;font-weight:bold}
+.jf-thumb .title-type span{font-size:0.7rem;line-height:0.7rem}
+
+.jf-thumb-2 .jfthumbnail{box-sizing:border-box;padding:0 0 15px}
+.jf-thumb-2 .jfthumbnail img{vertical-align:middle}
+.jf-thumb-2 .title-type{text-align:center}
+.jf-thumb-2 .title-type .judul_type{border:1px solid #0064D2;padding:2px 15px;display:inline-block;text-align:center;border-radius:50px;font-weight:bold}
+.jf-thumb-2 .title-type span{font-size:0.7rem;line-height:0.7rem}
+
+/*jfpitur*/
+.in-jfpitur{color:#fff;box-sizing:border-box;padding:2rem;padding-top:2.5rem}
+.in-jfpitur.bgblue{background-color:#0064D2;color:#fff;}
+.in-jfpitur.bgwhite{background-color:#F1F1F2;color:#333;border-bottom: 2px solid #E6E7E8}
+
+/*-- detail post --*/
+.jf-kolum-view-detail{width:100%;padding-top:15px;}
+.jf-kolum-view-detail-2{display:flex;flex-wrap:wrap;padding:0 0.5rem}
+.jf-kolom-thumb-detail{width:50%;float:left;padding:1.5rem 0.5rem;box-sizing:border-box;}
+.jf-kolum-view-detail-2 .jf-kolom-thumb-detail{float:inherit;padding:1rem 0.5rem}
+
+/*konten-more*/
+.jfkonten-jual-kolom{padding: 0 1rem}
+.jfkonten-jual-kolom .title-undangan,.jfkonten-jual-kolom .jfthumb-load-more,.jfkonten-jual-kolom .text-read-more{float:left;position:relative}
+.jfkonten-jual-kolom .jfthumb-load-more,.jfkonten-jual-kolom .text-read-more{box-sizing:border-box}
+.jfkonten-jual-kolom .jfthumb-load-more{width:100%;padding:2rem 0}
+.jfkonten-jual-kolom .text-read-more{width:100%}
+.jfkonten-jual-kolom .title-undangan{width:100%;}
+.jfkonten-jual-kolom .text-read-more{font-size:.7rem;line-height:1.2rem;padding-left:.7rem;}
+.jfkonten-jual-kolom .text-read-more button.shiny-blue{width:auto;padding-left:15px;padding-right:15px;}
+.jfkonten-jual-kolom .text-read-more button.shiny-blue2{width:auto;padding-left:15px;padding-right:15px;}
+.jfkonten-jual-kolom2{padding:2rem 1.5rem}
+.jfkonten-jual-kolom2 .title-undangan,.jfkonten-jual-kolom2 .jfthumb-load-more,.jfkonten-jual-kolom2 .text-read-more{float:right;position:relative}
+.jfkonten-jual-kolom2 .title-undangan h1{font-size:1.5rem;color:#0064D2;}
+.jfkonten-jual-kolom2 .jfthumb-load-more,.jfkonten-jual-kolom2 .text-read-more{box-sizing:border-box}
+.jfkonten-jual-kolom2 .jfthumb-load-more{width:35%;padding:0 0}
+.jfkonten-jual-kolom2 .jfthumb-load-more img{vertical-align:middle;}
+.jfkonten-jual-kolom2 .text-read-more{width:65%}
+.jfkonten-jual-kolom2 .title-undangan{width:100%;}
+.jfkonten-jual-kolom2 .text-read-more{font-size:.7rem;line-height:1.2rem;padding-right:.7rem;}
+.jfkonten-jual-kolom2 .text-read-more button.shiny-blue{width:auto;padding-left:15px;padding-right:15px;}
+
+.jfkonten-jual-kolom3{padding:2rem 1.5rem}
+.jfkonten-jual-kolom3 .title-undangan,.jfkonten-jual-kolom3 .jfthumb-load-more,.jfkonten-jual-kolom3 .text-read-more{float:left;position:relative}
+.jfkonten-jual-kolom3 .title-undangan h1{text-align:right;font-size:1.5rem;color:#0064D2;}
+.jfkonten-jual-kolom3 .jfthumb-load-more,.jfkonten-jual-kolom3 .text-read-more{box-sizing:border-box;text-align:right}
+.jfkonten-jual-kolom3 .jfthumb-load-more{width:35%;padding:0 0}
+.jfkonten-jual-kolom3 .jfthumb-load-more img{vertical-align:middle;}
+.jfkonten-jual-kolom3 .text-read-more{width:65%}
+.jfkonten-jual-kolom3 .title-undangan{width:100%;}
+.jfkonten-jual-kolom3 .text-read-more{font-size:.7rem;line-height:1.2rem;padding-left:.7rem;}
+.jfkonten-jual-kolom3 .text-read-more button.shiny-blue{width:auto;padding-left:15px;padding-right:15px;}
+div[class*="jfkonten-jual-"]:last-child{padding-bottom:0}
+
+.kolum-isi-jfkreatif-kebijakan-pripasi{padding:0 2rem;font-size:0.8rem}
+.kolum-isi-jfkreatif-kebijakan-pripasi ul{padding-right:1rem;margin-left:1rem}
+.tabel{overflow-x:auto;width:100%}
+table{
+border-collapse:collapse;
+border-spacing:0;
+width:calc(100%);
+border: 1px solid #ddd;
+}
+th{font-size:0.8rem}
+th,td{text-align:center;padding:10px 15px;border: 1px solid #ddd; }
+tr:nth-child(even){background-color:#f2f2f2}
+
+.preview-ud-cetak{width:90%;margin:0 auto;}
+.preview-ud-cetak img{width:100%;vertical-align:center}
+
+.preview-ud-cetak{width:90%;margin:0 auto;}
+.preview-ud-cetak img{width:100%;vertical-align:center}
+
+/*jfkreatif-kolom-footer*/
+.jfkreatif-kolom-footer{padding:1rem 0}
+.isi-kontak{display:flex;}
+.jfkreatif-row-footer{box-sizing:border-box;padding:30px;}
+.jfkreatif-kolom-footer{box-sizing:border-box;}
+.jfkreatif-icon{padding-right:0.8rem;font-size:1.2rem}
+.kontak-dan-alamat{padding-top:0.5rem}
+.kontak-dan-alamat .isi-kontak{padding:0.5rem 0}
+.jf-Dukungan,.jf-Produk{padding:1rem 0}
+.jf-Dukungan ul,.jf-Produk ul{padding-right:1rem;margin-left:1rem}
+.jf-Dukungan ul li a,.jf-Produk ul li a{text-decoration:none}
+
+
+
+/*mensos*/
+.jfkreatif-row-sosial{text-align:center}
+.jfkreatif-row-sosial a{display:block;width:50%;float:left;padding:1.5rem 2rem;box-sizing:border-box;font-size:1.3rem;line-height:0;color:#fff}
+.jfkreatif-row-sosial .mensos-tw{background-color:#0064D2}
+.jfkreatif-row-sosial .mensos-yt{background-color:#ED3237}
+.jfkreatif-row-sosial .mensos-fb{background-color:#3E4095}
+.jfkreatif-row-sosial .mensos-ig{background-color:#FF002B}
+
+/*footer*/
+footer{text-align:center;padding:1rem;font-size:0.7rem}
+footer a{text-decoration:none;}
