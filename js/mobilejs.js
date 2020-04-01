@@ -41,7 +41,7 @@ $(document).on('ready', function(){
 
 function linkhome() {
     
-	window.location.href='//singa37.github.io/jfkreatif/' 
+	window.location.href='//jfkreatif.com' 
 }
 
 function waorder(tpud){
