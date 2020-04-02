@@ -45,7 +45,7 @@ function linkhome() {
 }
 
 function waorder(tpud){
-	window.location.href='https://api.whatsapp.com/send?phone=6289605563525&text=Saya%20Tertarik%20denga%20undangan%20online%20'+tpud+'%20gimana%20cara%20ordernya?'
+	window.location.href='https://api.whatsapp.com/send?phone=6289605563525&text=Saya%20Tertarik%20dengan%20undangan%20online%20'+tpud+'%20gimana%20cara%20ordernya?'
 }
 
  
