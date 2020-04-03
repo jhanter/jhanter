@@ -171,6 +171,9 @@ width: 100%;
 #slider_jv .images_jv.tree{
     background: linear-gradient(to bottom left, #38FF6A, #009BF5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
+#slider_jv .images_jv.empat{
+    background: linear-gradient(to bottom left,#80035A , #FF087F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 
 
 #slider_jv div img{max-width:320px;margin:0 auto}
