@@ -172,7 +172,13 @@ width: 100%;
     background: linear-gradient(to bottom left, #38FF6A, #009BF5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 #slider_jv .images_jv.empat{
-    background: linear-gradient(to bottom left,#80035A , #FF087F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom left, #FF087F, #80035A ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+#slider_jv .images_jv.lima{
+    background: linear-gradient(to bottom left, #03096E, #EB09E3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+#slider_jv .images_jv.enam{
+    background: linear-gradient(to bottom left, #FFFF00, #FFB500, #FF9500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
 
