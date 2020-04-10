@@ -51,7 +51,7 @@ function waorderUdwebsite(tpudn){
 	window.location.href='https://api.whatsapp.com/send?phone=6281285869732&text=Saya%20Tertarik%20dengan%20undangan%20online%20website%20'+tpudn+'%20gimana%20cara%20ordernya?'
 }
 function waorderStd(std){
-	window.location.href='https://api.whatsapp.com/send?phone=6289605563525&text=Saya%20Tertarik%20dengan%20undangan%20Save%20The%20Date%20'+std+'%20gimana%20cara%20ordernya?'
+	window.location.href='https://api.whatsapp.com/send?phone=6289605563525&text=Saya%20Tertarik%20dengan%20undangan%20Gambar%20'+std+'%20gimana%20cara%20ordernya?'
 }
 
  
